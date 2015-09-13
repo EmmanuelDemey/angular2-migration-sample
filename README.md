@@ -1,0 +1,9 @@
+- Define all AngularJS components in a specific file
+- Use the controllerAs and bindToController syntax
+- Component First Approach
+- Rename fichiers en *.ts
+- Réecrire le Service
+- Réecrire le Filtre
+- Réécrire le composant Beer
+- Réécrire le composant principal
+- Modifier le template HTML
