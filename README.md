@@ -16,7 +16,13 @@ In Angular2, will use directly JavaScript Object, in which we will add propertie
 
 In Angular2, everything is component, even the main element of the application. We can start using the same pattern in AngularJS 1. We just need to create a new component, let's say `app`, with a specific controller similar to the previous `BrasserieCtrl` controller. 
 
-## Right now our AngularJS 1 application is ready for the migration. (step4)
+## Declare services with the `service` method (step4)
+
+One other small tip, when creating services, we should : 
+- first we always the same method : service/factory in order to have the syntax everywhere
+- Prefer the use of `service`, because we will manipulate directly the service object by adding properties/methods to the `this` object like in Angular 2
+
+## Right now our AngularJS 1 application is ready for the migration. (step5)
 
 We will describe in this part we can convert all our AngularJS 1 components into Angular 2. 
 
