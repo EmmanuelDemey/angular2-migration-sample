@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Angular2 Migration</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		
+		<script src="https://github.jspm.io/jmcriffey/bower-traceur-runtime@0.0.91/traceur-runtime.js"></script>
+    	<script src="http://cdnjs.cloudflare.com/ajax/libs/systemjs/0.18.4/system.src.js"></script>
+		<script>
+			 System.config({
+            	defaultJSExtensions: true
+        	});
+		</script>
+    	<script src="https://code.angularjs.org/2.0.0-alpha.37/angular2.dev.js"></script>
+
+		<style>
+			body {
+				width: 90%;
+				margin: auto;
+			}
+			.panel {
+				padding: 0 0 1em;
+				min-height: 250px;
+				max-height: 250px
+			}
+			button {
+				position: absolute;
+				bottom: 1em;
+				margin-left: 1em;
+			}
+			.panel-heading .glyphicon {
+				margin-right: .5em;
+			}
+		</style>
+	</head>
+	<body ng-app="Brewery">
+		<header><h1>Zenika Brewery !!</h1></header>
+		<app></app>
+		
+		<script>System.import('AppComponent');</script>
+
+	</body>
+</html>
+	
