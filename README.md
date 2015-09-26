@@ -2,20 +2,21 @@
 
 The main goal of this project is to describe how can migrate an AngularJS 1 application into Angular2. Some new features will be added in the future, in order to explain how to migrate everything from one version to the other. 
 
-## Define one component per file (branch step1)
+## Define one component per file (step1)
 
 One of the best practice when developing AngularJS application, is to define one AngularJS component (service, controller, directive, filter) per file. 
 The first task we have to do with this simple appication is to move all AngularJS into a specific file, and import these files in the `index.html` file. 
 
-## Use ControllerAs and bindToController feature (branch step2)
+We will also define a specific module for each component we will implement : `brewery.directive`, `brewery.service` and `brewery.filter`
+## Use ControllerAs and bindToController feature (step2)
 
 In Angular2, will use directly JavaScript Object, in which we will add properties/functions thanks to the `this` keyword. In AngularJS 1 application, we can do the same kind of thing thanks to the `controllerAs` and `bindToController` features. 
 
-## Use the Component First Pattern (branch step3)
+## Use the Component First Pattern (step3)
 
 In Angular2, everything is component, even the main element of the application. We can start using the same pattern in AngularJS 1. We just need to create a new component, let's say `app`, with a specific controller similar to the previous `BrasserieCtrl` controller. 
 
-## Right now our AngularJS 1 application is ready for the migration. (branch step4)
+## Right now our AngularJS 1 application is ready for the migration. (step4)
 
 We will describe in this part we can convert all our AngularJS 1 components into Angular 2. 
 

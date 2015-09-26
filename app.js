@@ -1,5 +1,5 @@
-var module = angular.module('Brasserie', []);
-module.service('BrasserieService', function(){
+var module = angular.module('Brewery', []);
+module.service('BreweryService', function(){
 		this.getBeers = function(){
 			return [
 				{name:'Heinekken', note: 0, description:'Heineken International est un groupe brassicole d’origine néerlandaise fondé en 1873 par Gerard Adriaan Heineken. C’est en 2011 le 3e brasseur au niveau mondial3, avec une part de marché en volume de 8,8 %, derrière Anheuser-Busch InBev (18,3 %) et SABMiller (9,8 %)4.'},
@@ -12,11 +12,11 @@ module.service('BrasserieService', function(){
 		};
 		
 		this.getOnePinte = function(beer){
-			alert('La pinte de ' + beer.name + ' est bientôt prête !');
+			alert('The pint ' + beer.name + ' is almost ready !');
 		};
 	})
-module.controller('BrasserieCtrl', function($scope, BrasserieService){
-		$scope.beers = BrasserieService.getBeers();
+module.controller('BreweryCtrl', function($scope, BreweryService){
+		$scope.beers = BreweryService.getBeers();
 		
 	})
 module.filter('NoteFilter', function(){
@@ -24,7 +24,7 @@ module.filter('NoteFilter', function(){
 			return value > 3 ? 'glyphicon glyphicon-heart' : '';
 		};
 	})
-module.directive('beerItem', function(BrasserieService){
+module.directive('beerItem', function(BreweryService){
 		return {
 			restrict: 'E',
 			scope: {
@@ -40,7 +40,7 @@ module.directive('beerItem', function(BrasserieService){
 					'</div>',
 			link: function($scope){
 				$scope.selectBeer = function(){
-					BrasserieService.getOnePinte($scope.beer);
+					BreweryService.getOnePinte($scope.beer);
 				};
 			}
 		};
