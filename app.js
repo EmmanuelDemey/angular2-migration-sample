@@ -21,7 +21,7 @@ module.controller('BrasserieCtrl', function($scope, BrasserieService){
 	})
 module.filter('NoteFilter', function(){
 		return function(value){
-			return value > 3;
+			return value > 3 ? 'glyphicon glyphicon-heart' : '';
 		};
 	})
 module.directive('beer', function(BrasserieService){
@@ -32,7 +32,7 @@ module.directive('beer', function(BrasserieService){
 			}, 
 			template: '<div class="col-md-4 panel panel-default">' +
 					'<div class="panel-heading">' +
-						'<span ng-class="{\'glyphicon glyphicon-heart\': {{beer.note | NoteFilter}} }"></span>{{beer.name}}</div>' +
+						'<span ng-class="beer.note | NoteFilter"></span>{{beer.name}}</div>' +
 						'<div class="panel-body">' +
 							'{{beer.description}}' +
 						'</div>' +
