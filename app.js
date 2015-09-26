@@ -24,7 +24,7 @@ module.filter('NoteFilter', function(){
 			return value > 3 ? 'glyphicon glyphicon-heart' : '';
 		};
 	})
-module.directive('beer', function(BrasserieService){
+module.directive('beerItem', function(BrasserieService){
 		return {
 			restrict: 'E',
 			scope: {
