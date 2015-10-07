@@ -1,3 +1,8 @@
+This demo has been used for many conferences : 
+- Technozaure (25th of September, Zenika Nord)
+- Chti JUG (29th of September, Lille)
+- Kaiz'n Day (8th of October, Paris)
+
 # How to do the migration from an AngularJS 1 application into Angular2 
 
 The main goal of this project is to describe how can migrate an AngularJS 1 application into Angular2. Some new features will be added in the future, in order to explain how to migrate everything from one version to the other. 
