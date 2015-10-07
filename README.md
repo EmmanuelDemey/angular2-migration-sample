@@ -37,6 +37,9 @@ We will describe in this part we can convert all our AngularJS 1 components into
 tsd install angular2 es6-promise rx rx-lite
 ```
 
+Please check that you have just downloaded the latest version of this angular2.d.ts. At the top of this file, 
+you should have access to the version (this version should be the same as the javascript file we will import later : 2.0.0-alpha-39).
+
 ### Rename all files with the `.ts` extension
 
 ### Update the HTML page
