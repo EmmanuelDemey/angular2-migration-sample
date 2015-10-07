@@ -46,7 +46,7 @@ One of the solution we can use in development, is to use the `SystemJS` module i
 		defaultJSExtensions: true
 	});
 </script>
-<script src="https://code.angularjs.org/2.0.0-alpha.37/angular2.dev.js"></script>
+<script src="https://code.angularjs.org/2.0.0-alpha.39/angular2.dev.js"></script>
 ```
 We have also to remove the old `ng-app` directive we used in the previous version. 
 

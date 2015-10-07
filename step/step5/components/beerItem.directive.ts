@@ -5,7 +5,7 @@ import {NoteFilter} from './note.filter'
 
 @Component({
 	selector: 'beer-item',
-	properties: ['beer']
+	inputs: ['beer']
 })
 @View({
 	template: `<div class="col-md-4 panel panel-default">
