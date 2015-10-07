@@ -19,7 +19,7 @@ In Angular2, will use directly JavaScript Object, in which we will add propertie
 
 ## Use the Component First Pattern (step3)
 
-In Angular2, everything is component, even the main element of the application. We can start using the same pattern in AngularJS 1. We just need to create a new component, let's say `app`, with a specific controller similar to the previous `BrasserieCtrl` controller. 
+In Angular2, everything is component, even the main element of the application. We can start using the same pattern in AngularJS 1. We just need to create a new component, let's say `app`, with a specific controller similar to the previous `BreweryCtrl` controller. 
 
 ## Declare services with the `service` method (step4)
 
