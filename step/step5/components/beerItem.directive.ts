@@ -5,9 +5,7 @@ import {NoteFilter} from './note.filter'
 
 @Component({
 	selector: 'beer-item',
-	inputs: ['beer']
-})
-@View({
+	inputs: ['beer'],
 	template: `<div class="col-md-4 panel panel-default">
 				<div class="panel-heading">
 					<span [class]="beer.note | NoteFilter"></span>{{beer.name}}</div>
@@ -15,7 +13,7 @@ import {NoteFilter} from './note.filter'
 						{{beer.description}}
 					</div>
 					<button (click)="selectBeer()" class="btn btn-primary">Give me a pinte !</button>
-				</div>`
+				</div>`,
 	pipes: [NoteFilter]
 })
 export class BeerItem {

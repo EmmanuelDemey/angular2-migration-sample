@@ -1,13 +1,11 @@
 /// <reference path="typings/angular2/angular2.d.ts" />
 
-import {Component, View, NgFor, bootstrap} from 'angular2/angular2'
+import {Component, NgFor, bootstrap} from 'angular2/angular2'
 import {Beer, BreweryService} from './components/brewery.service'
 import {BeerItem} from './components/beerItem.directive'
 
 @Component({
-	selector: 'app'
-})
-@View({
+	selector: 'app',
 	template: `<main>
 					<beer-item *ng-for="#b of beers" [beer]="b" ></beer-item>
 				</main>`,
