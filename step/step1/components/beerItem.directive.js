@@ -1,4 +1,4 @@
-angular.module('Brewery.directive', []).directive('beerItem', function(BreweryService){
+angular.module('Brewery.directive', []).directive('beerItem', ['BreweryService', function(BreweryService){
 	return {
 		restrict: 'E',
 		scope: {
@@ -12,10 +12,10 @@ angular.module('Brewery.directive', []).directive('beerItem', function(BrewerySe
 					'</div>' +
 					'<button ng-click="selectBeer()" class="btn btn-primary">Give me a pinte !</button>' +
 				'</div>',
-		link: function($scope){
+		controller: ['$scope', function($scope){
 			$scope.selectBeer = function(){
 				BreweryService.getOnePinte($scope.beer);
 			};
-		}
+		}]
 	};
-});
+}]);

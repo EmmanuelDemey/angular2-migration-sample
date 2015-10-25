@@ -27,6 +27,8 @@ One other small tip, when creating services, we should :
 - first we always the same method : service/factory in order to have the syntax everywhere
 - Prefer the use of `service`, because we will manipulate directly the service object by adding properties/methods to the `this` object like in Angular 2
 
+At the same time, you shoule only use the simple DI sytax (via function parameters) and use the ngAnnotate plugin in order to manage issues after minification.
+
 ## Right now our AngularJS 1 application is ready for the migration. (step5)
 
 We will describe in this part we can convert all our AngularJS 1 components into Angular 2. 

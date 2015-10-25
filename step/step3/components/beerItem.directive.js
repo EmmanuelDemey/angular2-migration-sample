@@ -1,4 +1,4 @@
-angular.module('Brewery.directive', []).directive('beerItem', function(BreweryService){
+angular.module('Brewery.directive', []).directive('beerItem', ['BreweryService', function(BreweryService){
 	return {
 		restrict: 'E',
 		scope: {
@@ -20,4 +20,4 @@ angular.module('Brewery.directive', []).directive('beerItem', function(BrewerySe
 			};
 		}
 	};
-});
+}]);
