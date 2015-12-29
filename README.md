@@ -33,32 +33,13 @@ At the same time, you shoule only use the simple DI sytax (via function paramete
 
 We will describe in this part we can convert all our AngularJS 1 components into Angular 2. 
 
-### Install all description file for TypeScript
+### Generate a new Angular2 thanks to angular-cli
 
 ```shell
-tsd install angular2 es6-promise rx rx-lite
+ng new ng2
 ```
 
-Please check that you have just downloaded the latest version of this angular2.d.ts. At the top of this file, 
-you should have access to the version (this version should be the same as the javascript file we will import later : 2.0.0-alpha-39).
-
-### Rename all files with the `.ts` extension
-
-### Update the HTML page
-
-One of the solution we can use in development, is to use the `SystemJS` module in order to be able to use JavaScript modules in the browser. In order to be able to do that, we have to update the `index.html` page in order to import traceur, SystemJS, Angular2 and lazy load the main component we will implement in the next part. 
-
-```javascript
-<script src="https://github.jspm.io/jmcriffey/bower-traceur-runtime@0.0.91/traceur-runtime.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/systemjs/0.18.4/system.src.js"></script>
-<script>
-	System.config({
-		defaultJSExtensions: true
-	});
-</script>
-<script src="https://code.angularjs.org/2.0.0-alpha.39/angular2.dev.js"></script>
-```
-We have also to remove the old `ng-app` directive we used in the previous version. 
+### Copy and Rename all files with the `.ts` extension in this new project
 
 ### Update the implentation of the Service
 
