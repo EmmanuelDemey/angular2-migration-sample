@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Step5</title>
+    <base href=".">
+    <script src="vendor/angular2/bundles/angular2-polyfills.js"></script>
+    {{content-for 'head'}}
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <style>
+        body {
+            width: 90%;
+            margin: auto;
+        }
+        
+        .panel {
+            padding: 0 0 1em;
+            min-height: 250px;
+            max-height: 250px
+        }
+        
+        button {
+            position: absolute;
+            bottom: 1em;
+            margin-left: 1em;
+        }
+        
+        .panel-heading .glyphicon {
+            margin-right: .5em;
+        }
+    </style>
+</head>
+
+<body>
+    <step5-app>Loading...</step5-app>
+
+    <script src="vendor/systemjs/dist/system.src.js"></script>
+    <script src="vendor/rxjs/bundles/Rx.js"></script>
+    <script src="vendor/angular2/bundles/angular2.dev.js"></script>
+    <script src="vendor/angular2/bundles/http.dev.js"></script>
+    <script src="vendor/angular2/bundles/router.dev.js"></script>
+    <script>
+        System.config({
+      packages: {
+        app: {
+          format: 'register',
+          defaultExtension: 'js'
+        }
+      }
+    });
+    System.import('app.js').then(null, console.error.bind(console));
+    </script>
+</body>
+
+</html>
