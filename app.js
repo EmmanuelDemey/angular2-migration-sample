@@ -9,9 +9,9 @@ module.factory('BreweryService', function(){
 				{name:'Cuvée des Jonquilles', note: 4.5, description:'La Brasserie Au Baron, propriété de la famille Bailleux est située à Gussignies dans le département du Nord.'},
 				{name:'Moinette', note: 4, description:'La Brasserie Dupont est une entreprise belge établie à Tourpes dans la commune de Leuze-en-Hainaut, au centre du Hainaut occidental.'},
 				{name:'Saint Feuillien', note: 4, description:'La St Feuillien est une bière belge d\'Abbaye reconnue produite au Rœulx (province de Hainaut) dans la brasserie St-Feuillien appelée aussi brasserie Friart.'}
-			];	
+			];
 		},
-		
+
 		getOnePinte : function(beer){
 			alert('The pint ' + beer.name + ' is almost ready !');
 		}
@@ -25,12 +25,12 @@ module.filter('NoteFilter', function(){
 		return value > 3 ? 'glyphicon glyphicon-heart' : '';
 	};
 })
-module.directive('beerItem', ['BreweryService', function(BreweryService){
+module.directive('beerItem', ['BreweryService', function(){
 	return {
 		restrict: 'E',
 		scope: {
 			beer: '='
-		}, 
+		},
 		template: '<div class="col-md-4 panel panel-default">' +
 				'<div class="panel-heading">' +
 					'<span ng-class="beer.note | NoteFilter"></span>{{beer.name}}</div>' +
@@ -39,7 +39,7 @@ module.directive('beerItem', ['BreweryService', function(BreweryService){
 					'</div>' +
 					'<button ng-click="selectBeer()" class="btn btn-primary">Give me a pinte !</button>' +
 				'</div>',
-		controller: ['$scope', function($scope){
+		controller: ['$scope', 'BreweryService', function($scope, BreweryService){
 			$scope.selectBeer = function(){
 				BreweryService.getOnePinte($scope.beer);
 			};
